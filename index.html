@@ -16,13 +16,14 @@
 </head>
 <body class="bg-gray-50">
 
+    <!-- HEADER -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="riyo-logo.jpg" class="h-12 w-auto rounded-full object-cover" alt="Logo Ri-Yo" onerror="this.src='https://ui-avatars.com/api/?name=Ri-Yo&background=ff6b6b&color=fff'">
+                <img src="http://github.com/bayunursandi037-blip/website-Ri-yo/blob/main/riyo-logo.png" alt="Ri-Yo Logo" class="w-10 h-10 rounded-2xl object-contain">
                 <div>
-                    <h1 class="text-2xl font-bold text-gray-800 leading-none">Ri-Yo</h1>
-                    <p class="text-[10px] text-gray-500 uppercase tracking-widest">SMK BUDHI WARMAN 1</p>
+                    <h1 class="text-2xl font-bold text-gray-800">Ri-Yo</h1>
+                    <p class="text-xs text-gray-500 -mt-1">SMK BUDHI WARMAN 1</p>
                 </div>
             </div>
             
@@ -42,20 +43,27 @@
                 <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-gray-700"><i class="fas fa-bars"></i></button>
             </div>
         </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 hover:text-pink-500">Beranda</a>
+            <a href="#produk" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 hover:text-pink-500">Produk</a>
+            <a href="#tentang" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 hover:text-pink-500">Tentang</a>
+            <a href="#kontak" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 hover:text-pink-500">Kontak</a>
+        </div>
     </header>
 
+    <!-- HERO -->
     <section id="home" class="hero-bg text-white py-24">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <div class="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-medium px-6 py-2 rounded-3xl mb-6 backdrop-blur-md">
                 <i class="fas fa-calendar-day"></i>
                 HARI INI - Lapangan SMK BUDHI WARMAN 1
             </div>
-            <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6 italic">Ri-Yo</h1>
-            <p class="text-xl mb-10 opacity-90 font-medium">Gurihnya Dapat, Segernya Nempel!</p>
+            <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6">Ri-Yo</h1>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#produk" class="bg-white text-pink-600 hover:bg-yellow-300 hover:text-pink-600 px-10 py-4 rounded-3xl font-semibold text-xl flex items-center justify-center gap-3 transition shadow-lg">
-                    <span>Lihat Menu</span>
-                    <i class="fas fa-utensils"></i>
+                <a href="#produk" class="bg-white text-pink-600 hover:bg-yellow-300 hover:text-pink-600 px-10 py-4 rounded-3xl font-semibold text-xl flex items-center justify-center gap-3 transition">
+                    <span>Lihat Produk</span>
+                    <i class="fas fa-arrow-right"></i>
                 </a>
                 <button onclick="document.getElementById('kontak').scrollIntoView({behavior: 'smooth'})" class="border-2 border-white hover:bg-white hover:text-pink-600 px-10 py-4 rounded-3xl font-semibold text-xl flex items-center justify-center gap-3 transition">
                     <i class="fab fa-whatsapp text-2xl"></i>
@@ -65,87 +73,122 @@
         </div>
     </section>
 
+    <!-- PRODUK -->
     <section id="produk" class="max-w-7xl mx-auto px-6 py-16">
-        <div class="mb-10 text-center md:text-left">
-            <span class="text-pink-500 font-bold tracking-widest uppercase text-sm">✦ Menu Andalan ✦</span>
-            <h2 class="text-4xl font-bold text-gray-800">Siap Menemani Harimu</h2>
+        <div class="flex justify-between items-end mb-10">
+            <div>
+                <span class="text-pink-500 font-medium">✦ PRODUK TERBAIK ✦</span>
+                <h2 class="text-4xl font-bold text-gray-800">Pilihan Menu</h2>
+            </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" id="product-grid"></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="product-grid"></div>
     </section>
 
+    <!-- TENTANG -->
     <section id="tentang" class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Ri-Yo – Kelompok 1</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        Kami menghadirkan perpaduan sempurna antara camilan gurih dan minuman segar. Risol Mayo kami dibuat dengan bahan pilihan, dan Mojito kami dijamin bikin hari panas jadi adem!
+                    <h2 class="text-4xl font-bold mb-6">Ri-Yo – SMK BUDHI WARMAN 1</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Halo! Kami menjual Risol Mayo yang super Gurih. dan minuman yang seger Dibuat langsung oleh siswa-siswi SMK BUDHI WARMAN 1. Cocok banget buat cemilan di Lapangan SMK BUDHI WARMAN 1!
                     </p>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
-                            <h4 class="font-bold text-gray-800">📍 Lokasi</h4>
-                            <p class="text-sm text-gray-600">Lapangan SMK BUDHI WARMAN 1</p>
-                        </div>
-                        <div class="bg-cyan-50 p-4 rounded-2xl border-l-4 border-cyan-500">
-                            <h4 class="font-bold text-gray-800">👥 Tim Kami</h4>
-                            <p class="text-xs text-gray-600 mt-1">Nayla, Okta Bayu, Raehan, Rasya, Satria, Lukal, Fadlan, Wanda.</p>
+                    <div class="mt-8 bg-pink-50 rounded-3xl p-6 text-sm">
+                        <div class="font-semibold mb-3">📍 Alamat Sekolah</div>
+                        <p class="text-gray-700">Jl. Raya Bogor No.Km.19, RT.6/RW.10, Kramat Jati,<br>Kec. Kramat Jati, Kota Jakarta Timur,<br>Daerah Khusus Ibukota Jakarta 13510</p>
+                        <div class="mt-6 flex items-center gap-3">
+                            <i class="fas fa-phone text-pink-500"></i>
+                            <div>
+                                <div class="font-semibold">Kontak</div>
+                                <div class="text-gray-700">0857-7110-2966</div>
+                            </div>
                         </div>
                     </div>
+                    <div class="mt-10 bg-pink-50 rounded-3xl p-6">
+                        <h3 class="font-bold text-pink-600 text-xl mb-4 flex items-center gap-2"><i class="fas fa-users"></i> KELOMPOK 1</h3>
+                        <ol class="text-gray-700 space-y-2 text-sm">
+                            <li>1. Nayla Anindya Naya</li>
+                            <li>2. Okta Bayu Nursandi</li>
+                            <li>3. Raehan Ananda Ramadhan</li>
+                            <li>4. Rasya Putra Gani Daulay</li>
+                            <li>5. Satria Nuris Dermawan</li>
+                            <li>6. Muhammad Lukal</li>
+                            <li>7. Muhammad Fadlan A.</li>
+                            <li>8. Wanda Putri L.</li>
+                        </ol>
+                    </div>
+                    <div class="mt-8 text-xs text-gray-500">Tugas PKK Market Day dengan guru Bpk. Fandi Agus Pranoto, S.Si</div>
                 </div>
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-tr from-pink-400 to-cyan-400 rounded-[3rem] blur-xl opacity-20"></div>
-                    <img src="riyo-logo.jpg" class="relative rounded-[3rem] shadow-2xl w-full max-w-md mx-auto border-8 border-white" alt="Team Ri-Yo">
+                <div class="bg-gradient-to-br from-pink-100 to-cyan-100 p-8 rounded-3xl text-center">
+                    <i class="fas fa-utensils text-8xl text-pink-400 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Ri-Yo GURIH NYA DAPAT SEGER NYA NEMPEL!!</h3>
+                    <p class="text-gray-600">Setiap pembelianmu mendukung kreativitas dan kewirausahaan siswa SMK BUDHI WARMAN 1.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-2xl font-bold mb-2 tracking-tighter">Ri-Yo</p>
-            <p class="text-xs text-gray-500 uppercase tracking-[0.3em]">Market Day • SMK BUDHI WARMAN 1 • 2026</p>
-        </div>
-    </footer>
-
-    <div id="cart-modal" class="hidden fixed inset-0 bg-black/70 z-[999] flex items-end md:items-center justify-center backdrop-blur-sm">
-        <div class="bg-white w-full max-w-lg md:rounded-3xl rounded-t-3xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+    <!-- CART MODAL -->
+    <div id="cart-modal" class="hidden fixed inset-0 bg-black/70 z-[999] flex items-end md:items-center justify-center">
+        <div class="bg-white w-full max-w-lg md:rounded-3xl rounded-t-3xl max-h-[90vh] overflow-hidden flex flex-col">
             <div class="p-6 border-b flex justify-between items-center">
-                <h3 class="text-2xl font-bold text-gray-800">Keranjang Belanja</h3>
+                <h3 class="text-2xl font-bold">Keranjang Belanja</h3>
                 <button onclick="toggleCart()" class="text-3xl text-gray-400 hover:text-gray-600">✕</button>
             </div>
-            <div id="cart-items" class="flex-1 p-6 overflow-auto bg-gray-50"></div>
-            <div class="p-6 border-t bg-white">
+            <div id="cart-items" class="flex-1 p-6 overflow-auto"></div>
+            <div class="p-6 border-t bg-gray-50">
                 <div class="mb-4">
-                    <label class="block text-xs font-bold text-gray-500 mb-2 uppercase">Nama Kamu</label>
-                    <input id="buyer-name" type="text" placeholder="Ketik nama di sini..." class="w-full px-5 py-4 border-2 rounded-2xl focus:border-pink-500 outline-none font-medium">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Pembeli *</label>
+                    <input id="buyer-name" type="text" placeholder="Masukkan nama kamu" class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:border-pink-500">
                 </div>
-                <div class="flex justify-between items-center mb-6">
-                    <span class="font-bold text-gray-400">Total:</span>
-                    <span id="cart-total" class="font-black text-3xl text-pink-600">Rp 0</span>
+                <div class="flex justify-between text-xl mb-4">
+                    <span class="font-semibold">Total:</span>
+                    <span id="cart-total" class="font-bold text-2xl">Rp 0</span>
                 </div>
-                <button onclick="confirmOrder()" class="w-full bg-gradient-to-r from-pink-500 to-cyan-500 text-white py-5 rounded-3xl text-xl font-bold shadow-lg shadow-pink-200">
-                    Kirim Pesanan ke WA <i class="fab fa-whatsapp ml-2"></i>
+                <button onclick="confirmOrder()" class="w-full bg-gradient-to-r from-pink-500 to-cyan-500 text-white py-5 rounded-3xl text-xl font-semibold hover:brightness-110 transition">
+                    Kirim Pesanan ke WhatsApp
                 </button>
             </div>
         </div>
     </div>
 
+    <!-- KONTAK -->
+    <section id="kontak" class="py-16 bg-gradient-to-br from-pink-500 to-cyan-500 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Mau pesan sekarang?</h2>
+            <a href="https://wa.me/6285771102966?text=Halo%20Ri-Yo%20SMK%20BUDHI%20WARMAN%201!%20Saya%20mau%20order..." target="_blank" class="inline-flex items-center gap-4 bg-white text-pink-600 hover:bg-yellow-300 px-12 py-6 rounded-3xl text-2xl font-semibold transition">
+                <i class="fab fa-whatsapp text-4xl"></i>
+                <div>
+                    <div>Chat WhatsApp</div>
+                    <div class="text-sm opacity-70">0857-7110-2966</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-2xl font-bold mb-2">Ri-Yo – SMK BUDHI WARMAN 1</p>
+            <p class="text-xs text-gray-500 mt-8">Dibuat dengan ❤️ oleh Grok • Simpan sebagai <strong>index.html</strong></p>
+        </div>
+    </footer>
+
     <script>
-        // DISESUAIKAN DENGAN NAMA FILE YANG ANDA UPLOAD
         let products = [
             { 
                 id: 1, 
                 name: "Risol Mayo Premium", 
                 price: 5000, 
-                desc: "Gurih, padat, dan creamy di setiap gigitan. (Isi 2 pcs)", 
-                image: "Risol Mayo.jpg" 
+                desc: "Risol Mayo Premium. Di luar nya Garing Dalam nya padat - (isi 2)", 
+                image: "🌯" 
             },
             { 
                 id: 5, 
                 name: "Es Mojito Mangga", 
                 price: 5000, 
-                desc: "Sensasi dingin dan manis mangga yang bikin nagih!", 
-                image: "Es Mangga Mojito.jpg" 
+                desc: "Minuman seger dengan perpaduan manisnya mangga dan seger nya soda", 
+                image: "🥭" 
             }
         ]
 
@@ -156,18 +199,16 @@
             container.innerHTML = ''
             products.forEach(product => {
                 const card = document.createElement('div')
-                card.className = `product-card bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100`
+                card.className = `product-card bg-white rounded-3xl overflow-hidden shadow-lg`
                 card.innerHTML = `
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="${product.image}" class="w-full h-full object-cover" alt="${product.name}" onerror="this.src='https://via.placeholder.com/400x300?text=Foto+Produk'">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-1 rounded-full font-bold text-pink-600 shadow-md">
-                            Rp ${product.price.toLocaleString('id-ID')}
+                    <div class="h-28 flex items-center justify-center text-7xl bg-gradient-to-br from-pink-100 to-cyan-100">${product.image}</div>
+                    <div class="p-5">
+                        <div class="flex justify-between">
+                            <div><h3 class="font-semibold text-lg">${product.name}</h3></div>
+                            <div class="font-bold text-xl text-pink-500">Rp ${product.price.toLocaleString('id-ID')}</div>
                         </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-bold text-2xl text-gray-800 mb-2">${product.name}</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed mb-6">${product.desc}</p>
-                        <button onclick="addToCart(${product.id})" class="w-full bg-gray-900 text-white py-4 rounded-2xl font-bold hover:bg-pink-600 transition shadow-lg shadow-gray-200">TAMBAH KE KERANJANG</button>
+                        <p class="text-sm text-gray-600 my-3">${product.desc}</p>
+                        <button onclick="addToCart(${product.id})" class="w-full mt-4 bg-gradient-to-r from-pink-500 to-cyan-500 text-white py-3 rounded-2xl font-medium">Tambah ke Keranjang</button>
                     </div>
                 `
                 container.appendChild(card)
@@ -181,14 +222,11 @@
             else cart.push({...product, qty: 1})
             updateCartCount()
             
-            const btn = event.target;
-            const originalText = btn.innerText;
-            btn.innerText = "✅ BERHASIL!";
-            btn.classList.add("bg-green-500");
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.classList.remove("bg-green-500");
-            }, 1000);
+            const notif = document.createElement('div')
+            notif.className = "fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-3xl shadow-xl"
+            notif.textContent = `✅ ${product.name} ditambahkan!`
+            document.body.appendChild(notif)
+            setTimeout(() => notif.remove(), 2000)
         }
 
         function updateCartCount() {
@@ -196,27 +234,23 @@
         }
 
         function toggleCart() {
-            document.getElementById('cart-modal').classList.toggle('hidden')
-            if (!document.getElementById('cart-modal').classList.contains('hidden')) renderCart()
+            const modal = document.getElementById('cart-modal')
+            modal.classList.toggle('hidden')
+            if (!modal.classList.contains('hidden')) renderCart()
         }
 
         function renderCart() {
             const container = document.getElementById('cart-items')
             let html = cart.length === 0 
-                ? `<div class="text-center py-12"><p class="text-gray-400">Keranjang kosong</p></div>`
+                ? `<div class="text-center py-12"><div class="text-6xl mb-4">🛒</div><p class="text-gray-400">Keranjang kosong</p></div>`
                 : cart.map(item => `
-                    <div class="bg-white p-4 rounded-2xl mb-3 shadow-sm flex gap-4 items-center border border-gray-100">
-                        <img src="${item.image}" class="w-16 h-16 rounded-xl object-cover" onerror="this.src='https://via.placeholder.com/100'">
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center text-4xl">${item.image}</div>
                         <div class="flex-1">
-                            <div class="font-bold text-gray-800">${item.name}</div>
-                            <div class="text-pink-500 font-bold">Rp ${(item.price * item.qty).toLocaleString('id-ID')}</div>
-                            <div class="flex items-center gap-4 mt-2">
-                                <div class="flex items-center bg-gray-100 rounded-lg">
-                                    <button onclick="changeQty(${item.id}, -1)" class="w-8 h-8 font-bold">-</button>
-                                    <span class="w-8 text-center text-xs font-bold">${item.qty}</span>
-                                    <button onclick="changeQty(${item.id}, 1)" class="w-8 h-8 font-bold">+</button>
-                                </div>
-                                <button onclick="removeFromCart(${item.id})" class="text-xs text-red-400 underline">Hapus</button>
+                            <div class="flex justify-between"><div class="font-medium">${item.name}</div><div class="font-bold">Rp ${(item.price * item.qty).toLocaleString('id-ID')}</div></div>
+                            <div class="flex justify-between mt-2">
+                                <div class="flex border rounded-2xl"><button onclick="changeQty(${item.id}, -1)" class="w-8 h-8">-</button><span class="px-4">${item.qty}</span><button onclick="changeQty(${item.id}, 1)" class="w-8 h-8">+</button></div>
+                                <button onclick="removeFromCart(${item.id})" class="text-red-500">Hapus</button>
                             </div>
                         </div>
                     </div>`).join('')
@@ -231,7 +265,6 @@
                 item.qty += change
                 if (item.qty < 1) removeFromCart(id)
                 else renderCart()
-                updateCartCount()
             }
         }
 
@@ -243,24 +276,34 @@
 
         function confirmOrder() {
             const nameInput = document.getElementById('buyer-name').value.trim()
-            if (!nameInput) return alert("❌ Isi nama dulu ya!")
+            if (!nameInput) return alert("❌ Mohon isi nama pembeli terlebih dahulu!")
             if (cart.length === 0) return
 
             const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0)
-            let orderText = `*PESANAN RI-YO MARKET DAY*\n`
-            orderText += `👤 *Nama:* ${nameInput}\n`
-            orderText += `━━━━━━━━━━━━━━\n`
+            let orderText = `PESANAN Ri-Yo - SMK BUDHI WARMAN 1\n\n`
+            orderText += `👤 Nama Pembeli: ${nameInput}\n\n`
             cart.forEach(item => {
-                orderText += `• ${item.name} (${item.qty}x)\n`
+                orderText += `• ${item.name} × ${item.qty} = Rp ${(item.price * item.qty).toLocaleString('id-ID')}\n`
             })
-            orderText += `━━━━━━━━━━━━━━\n`
-            orderText += `*TOTAL: Rp ${total.toLocaleString('id-ID')}*\n\n`
-            orderText += `_Saya segera ke stand ya!_ 🙏`
+            orderText += `\n─────────────────\nTOTAL : Rp ${total.toLocaleString('id-ID')}\n\nTerima kasih! 🙏`
 
-            window.open(`https://wa.me/6285771102966?text=${encodeURIComponent(orderText)}`, '_blank')
+            const waUrl = `https://wa.me/6285771102966?text=${encodeURIComponent(orderText)}`
+            window.open(waUrl, '_blank')
+
+            cart = []
+            updateCartCount()
+            toggleCart()
+            alert("✅ Pesanan dikirim ke WhatsApp Ri-Yo!\nSilakan lanjutkan di chat WA ya.")
         }
 
-        window.onload = renderProducts
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden')
+        }
+
+        window.onload = function() {
+            renderProducts()
+            console.log('%c✅ Deskripsi sudah diubah menjadi (isi 2)', 'color:#ec4899;font-size:18px;font-weight:bold')
+        }
     </script>
 </body>
 </html>
